@@ -1,3 +1,5 @@
+![GitHub release (with filter)](https://img.shields.io/github/v/release/Pulpyyyy/zwavejsuiproxy) ![GitHub](https://img.shields.io/github/license/Pulpyyyy/zwavejsuiproxy) [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+
 # Home Assistant Add-on: Z-Wave JS UI Proxy
 
 Allow access to remote Z-Wave JS UI server trouth HTTP(S) and have a direct shortcut in Home Assistant UI
