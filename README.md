@@ -15,3 +15,5 @@ Allow access to remote Z-Wave JS UI server trouth HTTP(S) and have a direct shor
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
+![image](https://github.com/Pulpyyyy/zwavejsuiproxy/blob/d7ab9ad0419e9bc5eab38b41e8c90e380d92d3c8/img/proxy.png)
