@@ -1,0 +1,22 @@
+name: "Z-wave JS UI Proxy"
+version: "1.0.0"
+slug: "z-wave-js-ui-proxy"
+description: "Getting access to external Z-wave JS UI from Home Assistant UI"
+panel_icon: "mdi:z-wave"
+arch:
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ingress: true
+init: false
+options:
+  server: "http://192.168.1.222:8091"
+  # authenticate: false
+  # user: "admin"
+  # password: "zwave"
+schema:
+  server: str
+  # authenticate: bool
+  # user: str
+  # password: password

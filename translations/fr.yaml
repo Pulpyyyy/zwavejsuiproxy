@@ -1,0 +1,13 @@
+configuration:
+  server: 
+    name: Serveur
+    description: URL complète du serveur Z-Wave JS UI
+  authenticate:
+    name: Authentification
+    description: Utilise un couple utilisateur/mot de passe pour s'authentifier à l'interface Z-Wave JS UI
+  user: 
+    name: Utilisateur
+    description: Compte d'accès à l'interface Z-Wave JS UI (par défaut =  admin)
+  password: 
+    name: Mot de passe
+    description:  Mot de passe d'accès à l'interface Z-Wave JS UI (par défaut =  zWave)
