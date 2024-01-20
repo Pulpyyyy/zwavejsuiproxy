@@ -1,4 +1,4 @@
-![GitHub release (with filter)](https://img.shields.io/github/v/release/Pulpyyyy/zwavejsuiproxy) ![GitHub](https://img.shields.io/github/license/Pulpyyyy/zwavejsuiproxy) [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/Pulpyyyy/zwavejsuiproxy) ![GitHub](https://img.shields.io/github/license/Pulpyyyy/zwavejsuiproxy)
 
 # Home Assistant Add-on: Z-Wave JS UI Proxy
 
@@ -31,3 +31,5 @@ Default credentials to use Z-Wave JS UI are "admin/zwave"
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
+![image](https://github.com/Pulpyyyy/zwavejsuiproxy/blob/d7ab9ad0419e9bc5eab38b41e8c90e380d92d3c8/img/proxy.png)
