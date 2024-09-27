@@ -1,5 +1,5 @@
 name: "Z-Wave JS UI Proxy"
-version: "1.0.0"
+version: "1.0.1"
 slug: "z-wave-js-ui-proxy"
 description: "Getting access to external Z-wave JS UI from Home Assistant UI"
 panel_icon: "mdi:z-wave"
