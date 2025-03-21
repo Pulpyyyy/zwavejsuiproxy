@@ -19,6 +19,8 @@ LABEL \
     io.hass.description="${BUILD_DESCRIPTION}" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
-    io.hass.version=${BUILD_VERSION}
-
+    io.hass.version=${BUILD_VERSION} \
+    org.opencontainers.image.source="${BUILD_SOURCE}" \
+    org.opencontainers.image.description="${BUILD_DESCRIPTION}"
+    
 ENTRYPOINT ["/bin/sh", "-c", "/entrypoint.sh"]
