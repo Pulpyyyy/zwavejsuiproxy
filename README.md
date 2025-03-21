@@ -9,9 +9,8 @@ The sole purpose of this addon is to add a Z-wave JS UI icon to the sidebar of H
 
 ## Installation
 
-Add github's link to you addon repository list.
-Restart your Home Assistant, then go back to addon and select Z-wave JS UI Proxy.
-Enjoy !
+
+[![Addon Home Assistant](https://raw.githubusercontent.com/Pulpyyyy/zwavejsuiproxy/refs/heads/main/.github/img/addon-ha.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FPulpyyyy%2Fzwavejsuiproxy/)
 
 ## Options
 
