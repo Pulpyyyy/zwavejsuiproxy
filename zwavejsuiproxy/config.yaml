@@ -1,5 +1,5 @@
 name: "Z-Wave JS UI Proxy"
-version: 1.0.2
+version: 1.1.0
 slug: "z-wave-js-ui-proxy"
 description: "Getting access to external Z-wave JS UI from Home Assistant UI"
 image: "docker.io/pulpyyyy/zwavejsuiproxy-addon-{arch}"
