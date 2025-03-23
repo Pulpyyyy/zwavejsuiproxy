@@ -44,25 +44,22 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # - name: Check if Docker image exists
-      #   run: |
-      #     IMAGE="${{ env.REPOSITORY }}/${{ matrix.addon }}"
-      #     VERSION=$(grep -E '^version:' "${{ matrix.addon }}/config.yaml" | awk '{print $2}' | sed 's/"//g')
+      - name: Check if Docker image exists
+        run: |
+          IMAGE="${{ env.REPOSITORY }}/${{ matrix.addon }}-${{ matrix.arch }}"
+          TAG=$(grep -E '^version:' "${{ matrix.addon }}/config.yaml" | awk '{print $2}' | sed 's/"//g')
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://hub.docker.com/v2/repositories/$IMAGE/tags/$TAG")
 
-      #     STATUS=$(curl -s https://hub.docker.com/v2/repositories/$IMAGE/tags | grep -Po '"name":\s*"\K'"$VERSION"'')
-      #     echo $IMAGE
-      #     echo $VERSION
-      #     echo $STATUS
-      #     if [ -z "$STATUS" ]; then
-      #       echo "IMAGE_EXISTS=false" >> $GITHUB_ENV
-      #       echo "The image $IMAGE:$TAG does not exist on Docker Hub."
-      #     else
-      #       echo "IMAGE_EXISTS=true" >> $GITHUB_ENV
-      #       echo "The image $IMAGE:$TAG exists on Docker Hub."
-      #     fi
+          if [ "$STATUS" -eq 404 ]; then
+            echo "IMAGE_EXISTS=false" >> $GITHUB_ENV
+            echo "The image $IMAGE:$TAG does not exist on Docker Hub."
+          else
+            echo "IMAGE_EXISTS=true" >> $GITHUB_ENV
+            echo "The image $IMAGE:$TAG exists on Docker Hub."
+          fi
           
-      - name: Publish ${{ matrix.arch }} builder
-        # if: env.IMAGE_EXISTS == 'false'
+      - name: Publish ${{ matrix.architecture }} builder
+        if: env.IMAGE_EXISTS == 'false'
         uses: home-assistant/builder@2025.03.0
         with:
           args: |
@@ -70,4 +67,4 @@ jobs:
             --${{ matrix.arch }} \
             --docker-hub "${{ env.REGISTRY }}" \
             --target /data/${{ matrix.addon }} \
-            --image "${{ env.REPOSITORY }}/${{ matrix.addon }}"
+            --image "${{ env.REPOSITORY }}/${{ matrix.addon }}-${{ matrix.arch }}"
