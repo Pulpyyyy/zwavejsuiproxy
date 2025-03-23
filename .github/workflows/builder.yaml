@@ -48,8 +48,11 @@ jobs:
         run: |
           IMAGE="${{ env.REPOSITORY }}/${{ matrix.addon }}"
           VERSION=$(grep -E '^version:' "${{ matrix.addon }}/config.yaml" | awk '{print $2}' | sed 's/"//g')
-          STATUS=$(curl -s https://hub.docker.com/v2/repositories/$IMAGE/tags | grep -Po '"name":\s*"\K'"$VERSION"'')
 
+          STATUS=$(curl -s https://hub.docker.com/v2/repositories/$IMAGE/tags | grep -Po '"name":\s*"\K'"$VERSION"'')
+          echo $IMAGE
+          echo $VERSION
+          echo $STATUS
           if [ -z "$STATUS" ]; then
             echo "IMAGE_EXISTS=false" >> $GITHUB_ENV
             echo "The image $IMAGE:$TAG does not exist on Docker Hub."
