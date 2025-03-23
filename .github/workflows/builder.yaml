@@ -62,7 +62,7 @@ jobs:
       #     fi
           
       - name: Publish ${{ matrix.arch }} builder
-        if: env.IMAGE_EXISTS == 'false'
+        # if: env.IMAGE_EXISTS == 'false'
         uses: home-assistant/builder@2025.03.0
         with:
           args: |
