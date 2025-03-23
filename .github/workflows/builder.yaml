@@ -48,7 +48,7 @@ jobs:
         run: |
           IMAGE="${{ env.REPOSITORY }}/${{ matrix.addon }}"
           VERSION=$(grep -E '^version:' "${{ matrix.addon }}/config.yaml" | awk '{print $2}' | sed 's/"//g')
-          STATUS=$(curl -s https://hub.docker.com/v2/repositories/${{ env.REPOSITORY }}/${{ matrix.addon }}/tags | grep -Po '"name":\s*"\K'"$VERSION"'')
+          STATUS=$(curl -s https://hub.docker.com/v2/repositories/$IMAGE/tags | grep -Po '"name":\s*"\K'"$VERSION"'')
 
           if [ -z "$STATUS" ]; then
             echo "IMAGE_EXISTS=false" >> $GITHUB_ENV
