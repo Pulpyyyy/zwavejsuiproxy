@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: Build and Push Docker Images 2
 
 on:
   workflow_run:
@@ -35,7 +35,7 @@ jobs:
         id: info
         uses: home-assistant/actions/helpers/info@master
         with:
-          path: "./"
+          path: /data/${{ matrix.addon }}
           
       - name: Publish builder
         if: env.IMAGE_EXISTS == 'false'
