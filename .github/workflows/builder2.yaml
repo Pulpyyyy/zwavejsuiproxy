@@ -22,6 +22,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4.2.2
         
+      - name: Get information
+        id: info
+        uses: home-assistant/actions/helpers/info@master
+        with:
+          path: ./zwavejsuiproxy
+          
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
@@ -44,6 +50,7 @@ jobs:
         id: build
         uses: docker/build-push-action@v6
         with:
+          build-args: 
           platforms: ${{ matrix.arch }}
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ env.REGISTRY_IMAGE }}
