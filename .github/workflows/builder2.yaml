@@ -22,10 +22,6 @@ jobs:
   build_addon:
     name: Build addon
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        arch: [amd64, armhf, armv7, aarch64,  i386]
-        addon: [zwavejsuiproxy]
 
     steps:
       - name: Check out repository
