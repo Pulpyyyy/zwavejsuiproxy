@@ -34,8 +34,6 @@ jobs:
       - name: Get information
         id: info
         uses: home-assistant/actions/helpers/info@master
-        with:
-          path: /data/${{ matrix.addon }}
           
       - name: Publish builder
         if: env.IMAGE_EXISTS == 'false'
