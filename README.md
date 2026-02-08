@@ -1,3 +1,13 @@
+# ⚠️ Dépôt remplacé
+
+> Ce dépôt est **archivé** et n’est plus mis à jour.
+
+🔗 **Nouvelle version du projet :**  
+👉[Nouveau multiproxy]([https://github.com/Pulpyyyy/meteocss-card](https://github.com/Pulpyyyy/multiappproxy))
+
+
+
+
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/Pulpyyyy/zwavejsuiproxy) ![GitHub](https://img.shields.io/github/license/Pulpyyyy/zwavejsuiproxy)
 
 # Home Assistant Add-on: Z-Wave JS UI Proxy
